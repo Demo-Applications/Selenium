@@ -16,10 +16,9 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@home-page
-Feature: Youtube Homepage
+Feature: Youtube Video Select and Search
 
-  @video-click
+  @video-click @home-page
   Scenario: Clicking any video from the homepage
     Given I have youtube homepage open
     When I choose a video
@@ -27,13 +26,16 @@ Feature: Youtube Homepage
     And switch to that tab
     Then i can see video page opened
     And video starts playing
-  #@tag2
-  #Scenario Outline: Title of your scenario outline
-    #Given I want to write a step with <name>
-    #When I check for the <value> in step
-    #Then I verify the <status> in step
-#
-    #Examples: 
-      #| name  | value | status  |
-      #| name1 |     5 | success |
-      #| name2 |     7 | Fail    |
+
+  @video-search
+  Scenario Outline: Searching for a specific video
+    Given I have youtube web page open
+    When I search for this <query>
+    Then I verify the <webpage_title> in page title
+    And I see <query> is present in the searchbox of new page
+    And I see webpage url is modified with <query_string>
+
+    Examples: 
+      | query       | webpage_title | query_string |
+      | 'word'      | 'word'        | 'word'       |
+      | 'two words' | 'two words'   | 'two+words'  |
