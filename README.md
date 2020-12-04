@@ -1,6 +1,11 @@
 # SELENIUM TEST [With Cucumber and J-Unit]
 
-[TOC]
+# Table of Contents
+1. [Introduction](#Introduction)
+2. [Requirements](#Requirements)
+3. [Running The Test](#Running The Test)
+4. [Existing Feature](#Existing Feature)
+5. [Project Structure](#Project Structure)
 
 ### Author: Sayantan Dey
 
@@ -18,7 +23,7 @@
 
 - Dependencies : The dependencies are mentioned in   [pom]: selenium_test/pom.xml  file
 
-  ><img src="./docs/logos/selenium.png" alt="Selenium" style="zoom:20%;" />     <img src="./docs/logos/cucumber.png" alt="cucumber" style="zoom:25%;" />     <img src="C:\Users\Sayantan\Documents\Git Repos\Selenium\docs\logos\JUnit.png" style="zoom: 33%;" />
+  >![](/docs/logos/selenium.png =50x)        ![](/docs/logos/cucumber.png =50x)     ![](/docs/logos/Junit.png =50x)     
 
 ## Running The Test
 
