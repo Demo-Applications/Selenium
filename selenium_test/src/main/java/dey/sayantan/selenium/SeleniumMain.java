@@ -9,10 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import dey.sayantan.selenium.utils.YoutubeTestUtil;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ChromeTest {
+public class SeleniumMain {
 	private static String CHROME_VERSION = "87.0.4280.88";
 
 	public static void main(String[] args) {
@@ -21,9 +20,8 @@ public class ChromeTest {
 		options.addArguments("--no-sandbox");
 		WebDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
-		YoutubeTestUtil.clickOnVideoByIndex(5, driver);
+		driver.get("www.youtube.com");
 		openNewTab(driver);
-		YoutubeTestUtil.searchForVideo("Today's Space News", driver);
 		scrollPageTillEnd(driver);
 	}
 
