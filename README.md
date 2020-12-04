@@ -47,55 +47,42 @@ Run the test using maven CLI
 
 ```
 Selenium
+│   README.md
+│
 ├───docs
 │   └───logos
+│           cucumber.png
+│           JUnit.png
+│           selenium.png
+│
 └───selenium_test
-    ├───.settings
-    ├───src
-    │   ├───main
-    │   │   └───java
-    │   │       └───dey
-    │   │           └───sayantan
-    │   │               └───selenium
-    │   └───test
-    │       ├───java
-    │       │   └───dey
-    │       │       └───sayantan
-    │       │           └───selenium
-    │       │               └───youtube
-    │       │                   ├───features
-    │       │                   ├───runner
-    │       │                   ├───steps
-    │       │                   └───utils
-    │       └───resources
-    └───target
-        ├───classes
-        │   ├───dey
-        │   │   └───sayantan
-        │   │       └───selenium
-        │   └───META-INF
-        │       └───maven
+    │   pom.xml
+    │
+    └───src
+        ├───main
+        │   └───java
+        │       └───dey
         │           └───sayantan
-        │               └───selenium_java
-        ├───generated-sources
-        │   └───annotations
-        ├───generated-test-sources
-        │   └───test-annotations
-        ├───maven-status
-        │   └───maven-compiler-plugin
-        │       ├───compile
-        │       │   └───default-compile
-        │       └───testCompile
-        │           └───default-testCompile
-        ├───surefire-reports
-        └───test-classes
-            ├───dey
-            │   └───sayantan
-            │       └───selenium
-            │           └───youtube
-            │               ├───features
-            │               ├───runner
-            │               ├───steps
-            │               └───utils
-            └───features
+        │               └───selenium
+        │                       SeleniumMain.java
+        │
+        └───test
+            └───java
+                └───dey
+                    └───sayantan
+                        └───selenium
+                            └───youtube
+                                ├───features
+                                │       Youtube.feature
+                                │
+                                ├───runner
+                                │       JUnitRunner.java
+                                │
+                                ├───steps
+                                │       YoutubeHomeTest.java
+                                │       YoutubeSearchTest.java
+                                │
+                                └───utils
+                                        YoutubeTestUtil.java
+    
 ```
