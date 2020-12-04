@@ -55,6 +55,7 @@ public class YoutubeHomeTest {
 	@When("switch to that tab")
 	public void switchToThatTab() {
 		String currentHandle = driver.getWindowHandle();
+		driver.close();
 		for (String handle : driver.getWindowHandles()) {
 			if (!handle.equals(currentHandle))
 				driver.switchTo().window(handle);

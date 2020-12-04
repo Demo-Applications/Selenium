@@ -22,13 +22,21 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>6.6.0</version>
 		</dependency>
+		<!-- To have a reporting tool that interlink between different feature file -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>6.6.0</version>
+			<scope>test</scope>
+		</dependency>
+
 
 	</dependencies>
 	<build>
 		<pluginManagement>
 			<plugins>
 				<!-- Default java version was 1.5, to change the default version added 
-					this plugin-->
+					this plugin -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
