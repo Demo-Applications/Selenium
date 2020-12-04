@@ -24,7 +24,8 @@ Feature: Youtube Homepage
     Given I have youtube homepage open
     When I choose a video
     And open it in a new tab
-    Then the video page opens
+    And switch to that tab
+    Then i can see video page opened
     And video starts playing
   #@tag2
   #Scenario Outline: Title of your scenario outline

@@ -16,6 +16,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+/** Step definitions for selecting on a random video on homepage */
 //For time being test is coupled with Chrome and Windows 
 public class YoutubeHomeTest {
 	private static String CHROME_VERSION = "87.0.4280.88";
@@ -45,13 +46,17 @@ public class YoutubeHomeTest {
 		new Actions(driver).keyDown(Keys.CONTROL).click(videoToBeClicked).keyUp(Keys.CONTROL).build().perform();
 	}
 
-	@Then("the video page opens")
-	public void the_video_page_opens() {
+	@When("switch to that tab")
+	public void switch_to_that_tab() {
 		String currentHandle = driver.getWindowHandle();
 		for (String handle : driver.getWindowHandles()) {
 			if (!handle.equals(currentHandle))
 				driver.switchTo().window(handle);
 		}
+	}
+
+	@Then("i can see video page opened")
+	public void i_can_see_video_page_opened() {
 		Asserts.check(driver.getCurrentUrl().matches(YoutubeTestUtil.OPENED_VIDEO_REGEX),
 				"URL of the video opened is wrong :" + driver.getCurrentUrl());
 	}
