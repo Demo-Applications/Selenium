@@ -3,9 +3,9 @@
 # Table of Contents
 1. [Introduction](#Introduction)
 2. [Requirements](#Requirements)
-3. [Running The Test](#Running The Test)
-4. [Existing Feature](#Existing Feature)
-5. [Project Structure](#Project Structure)
+3. [Running The Test](#Running-The-Test)
+4. [Existing Feature](#Existing-Feature)
+5. [Project Structure](#Project-Structure)
 
 ### Author: Sayantan Dey
 
