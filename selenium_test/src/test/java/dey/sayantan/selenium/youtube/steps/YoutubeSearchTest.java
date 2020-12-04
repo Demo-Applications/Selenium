@@ -20,7 +20,7 @@ public class YoutubeSearchTest {
 	private WebDriver driver;
 	WebElement videoToBeClicked;
 
-	@Before
+	@Before("@video-search")
 	public void openBrowser() {
 		WebDriverManager.chromedriver().version(CHROME_VERSION).setup();
 		ChromeOptions options = new ChromeOptions();
@@ -57,7 +57,7 @@ public class YoutubeSearchTest {
 		Asserts.check(queryString.equals(searchString), "Query string is different");
 	}
 
-	@After
+	@After("@video-search")
 	public void closeDriver() {
 		driver.quit();
 	}

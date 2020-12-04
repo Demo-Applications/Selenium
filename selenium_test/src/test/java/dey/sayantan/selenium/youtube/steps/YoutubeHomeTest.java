@@ -25,7 +25,7 @@ public class YoutubeHomeTest {
 	private WebDriver driver;
 	WebElement videoToBeClicked;
 
-	@Before
+	@Before("@video-click")
 	public void openBrowser() {
 		WebDriverManager.chromedriver().version(CHROME_VERSION).setup();
 		ChromeOptions options = new ChromeOptions();
@@ -72,7 +72,7 @@ public class YoutubeHomeTest {
 		Asserts.check(YoutubeTestUtil.durationOfCurrentVideoPlayed(driver) != 0, "video is not played");
 	}
 
-	@After
+	@After("@video-click")
 	public void closeDriver() {
 		driver.quit();
 	}
