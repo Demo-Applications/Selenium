@@ -48,7 +48,6 @@ Run the test using maven CLI
 ```
 Selenium
 │   README.md
-│
 ├───docs
 │   └───logos
 │           cucumber.png
