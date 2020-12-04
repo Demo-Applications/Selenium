@@ -23,7 +23,7 @@
 
 - Dependencies : The dependencies are mentioned in   [pom]: selenium_test/pom.xml  file
 
-  > <img src="docs/logos/selenium.png" width="48">   <img src="docs/logos/cucumber.png" width="48">  <img src="docs/logos/JUnit.png" width="60">     
+  > <img src="docs/logos/selenium.png" width="78">         <img src="docs/logos/cucumber.png" width="78">        <img src="docs/logos/JUnit.png" width="88">     
 
 ## Running The Test
 
