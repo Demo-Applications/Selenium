@@ -12,7 +12,7 @@ public class YoutubeTestUtil {
 	public static final String URL = "https://www.youtube.com/";
 	public static final String OPENED_VIDEO_REGEX = "^http(s)?:\\/\\/(www|m).youtube.com\\/watch\\?v=.+$";
 
-	private static final String CONTENT_CONTAINER_ID = "contents";
+	private static final String CONTAINER_GRID_XPATH = "//ytd-rich-grid-renderer/div[@id='contents']";
 	private static final String VIDEO_TAG = "ytd-rich-item-renderer";
 	private static final String SEARCH_BOX_TAG = "ytd-searchbox";
 	private static final String FORM = "form";
@@ -32,8 +32,10 @@ public class YoutubeTestUtil {
 
 	public static WebElement selectVideoToBeClickedByIndex(int index, WebDriver driver) {
 		openYoutubeIfNotOpened(driver);
-		WebElement homeVideosContainer = driver.findElement(By.id(CONTENT_CONTAINER_ID));
+		WebElement homeVideosContainer = driver.findElement(By.xpath(CONTAINER_GRID_XPATH));
 		WebElement videoToBeClicked = selectVideoFromContainerByindex(index, homeVideosContainer, driver);
+		Actions action = new Actions(driver);
+		action.moveToElement(videoToBeClicked);
 		return videoToBeClicked;
 	}
 
@@ -41,12 +43,7 @@ public class YoutubeTestUtil {
 			WebDriver driver) {
 		while (homeVideosContainer.findElements(By.tagName(VIDEO_TAG)).size() < index) {
 			JavascriptExecutor jse = (JavascriptExecutor) driver;
-			jse.executeScript("window.scrollBy(0, window.scrollY + 100)");
-			try {
-				driver.wait();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+			jse.executeScript("window.scrollBy(0, window.scrollY + 200)");
 		}
 		return homeVideosContainer.findElements(By.tagName(VIDEO_TAG)).get(index - 1);
 	}
