@@ -19,6 +19,8 @@ public class YoutubeTestUtil {
 	private static final String PROGRESS_BAR_CLASS = "ytp-progress-bar";
 	private static final String PROGRESS_ATTRIBUTE = "aria-valuenow";
 	private static final String VIDEO_AD_CLASS = "ytp-ad-player-overlay";
+	private static final String TITLE_XPATH = "//title";
+	private static final String SEARCHBOX_XPATH = "//input[@id='search']";
 
 	public static void clickOnVideoByIndex(int index, WebDriver driver) {
 		if (index <= 0)
@@ -75,6 +77,14 @@ public class YoutubeTestUtil {
 		}
 		WebElement progressBarElement = driver.findElement(By.className(PROGRESS_BAR_CLASS));
 		return Integer.parseInt(progressBarElement.getAttribute(PROGRESS_ATTRIBUTE));
+	}
+
+	public static String getPageTitle(WebDriver driver) {
+		return driver.findElement(By.xpath(TITLE_XPATH)).getText();
+	}
+
+	public static Object getSearchBoxContent(WebDriver driver) {
+		return driver.findElement(By.xpath(SEARCHBOX_XPATH)).getAttribute("value");
 	}
 
 }
