@@ -16,6 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
+@YouTube
 Feature: Youtube Video Select and Search
 
   @video-click @home-page
