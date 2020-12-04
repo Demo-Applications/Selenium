@@ -1,4 +1,4 @@
-package dey.sayantan.selenium.youtube;
+package dey.sayantan.selenium.youtube.steps;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -10,7 +10,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
-import dey.sayantan.selenium.utils.YoutubeTestUtil;
+import dey.sayantan.selenium.youtube.utils.YoutubeTestUtil;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,18 +25,22 @@ public class YoutubeHomeTest {
 	private WebDriver driver;
 	WebElement videoToBeClicked;
 
-	@Given("I have youtube homepage open")
-	public void i_have_youtube_homepage_open() {
+	@Before("@video-click")
+	public void openBrowser() {
 		WebDriverManager.chromedriver().version(CHROME_VERSION).setup();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--no-sandbox");
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
+	}
+
+	@Given("I have youtube homepage open")
+	public void iHaveYoutubeHomepageOpen() {
 		YoutubeTestUtil.openYoutubeIfNotOpened(driver);
 	}
 
 	@When("I choose a video")
-	public void i_choose_a_video() {
+	public void iChooseAVideo() {
 		// Choosing part is mocked here by generating a random number that is the index
 		// of the video on homepage
 		videoToBeClicked = YoutubeTestUtil.selectVideoToBeClickedByIndex(ThreadLocalRandom.current().nextInt(1, 22),
@@ -42,12 +48,12 @@ public class YoutubeHomeTest {
 	}
 
 	@When("open it in a new tab")
-	public void open_it_in_a_new_tab() {
+	public void openItInANewTab() {
 		new Actions(driver).keyDown(Keys.CONTROL).click(videoToBeClicked).keyUp(Keys.CONTROL).build().perform();
 	}
 
 	@When("switch to that tab")
-	public void switch_to_that_tab() {
+	public void switchToThatTab() {
 		String currentHandle = driver.getWindowHandle();
 		for (String handle : driver.getWindowHandles()) {
 			if (!handle.equals(currentHandle))
@@ -56,14 +62,18 @@ public class YoutubeHomeTest {
 	}
 
 	@Then("i can see video page opened")
-	public void i_can_see_video_page_opened() {
+	public void iCanSeeVideoPageOpened() {
 		Asserts.check(driver.getCurrentUrl().matches(YoutubeTestUtil.OPENED_VIDEO_REGEX),
 				"URL of the video opened is wrong :" + driver.getCurrentUrl());
 	}
 
 	@Then("video starts playing")
-	public void video_starts_playing() {
+	public void videoStartsPlaying() {
 		Asserts.check(YoutubeTestUtil.durationOfCurrentVideoPlayed(driver) != 0, "video is not played");
+	}
+
+	@After("@video-click")
+	public void closeDriver() {
 		driver.quit();
 	}
 }

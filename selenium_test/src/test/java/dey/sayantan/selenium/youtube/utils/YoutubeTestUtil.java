@@ -1,4 +1,4 @@
-package dey.sayantan.selenium.utils;
+package dey.sayantan.selenium.youtube.utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
