@@ -1,0 +1,389 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-05T15:53:48.660Z",
+        "before": [
+          {
+            "result": {
+              "duration": 17894000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.openBrowser()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Clicking any video from the homepage",
+        "description": "",
+        "id": "youtube-video-select-and-search;clicking-any-video-from-the-homepage",
+        "after": [
+          {
+            "result": {
+              "duration": 6562000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.closeDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 20558000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I have youtube homepage open",
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.iHaveYoutubeHomepageOpen()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1334000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I choose a video",
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.iChooseAVideo()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 786000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "open it in a new tab",
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.openItInANewTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 348000000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "switch to that tab",
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.switchToThatTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18917000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "i can see video page opened",
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.iCanSeeVideoPageOpened()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.IllegalStateException: video is not played\r\n\tat org.apache.http.util.Asserts.check(Asserts.java:34)\r\n\tat dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.videoStartsPlaying(YoutubeHomeTest.java:73)\r\n\tat ✽.video starts playing(file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:29)\r\n",
+              "duration": 2509000000,
+              "status": "failed"
+            },
+            "line": 29,
+            "name": "video starts playing",
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.videoStartsPlaying()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@YouTube"
+          },
+          {
+            "name": "@video-click"
+          },
+          {
+            "name": "@home-page"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-05T15:54:59.390Z",
+        "before": [
+          {
+            "result": {
+              "duration": 12956000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.openBrowser()"
+            }
+          }
+        ],
+        "line": 41,
+        "name": "Searching for a specific video",
+        "description": "",
+        "id": "youtube-video-select-and-search;searching-for-a-specific-video;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1224000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.closeDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 28330000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I have youtube web page open",
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iHaveYoutubeWebPageOpen()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6666000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I search for this \u0027word\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027word\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSearchForThisQuery(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I verify the \u0027word\u0027 in page title",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027word\u0027",
+                  "offset": 13
+                }
+              ],
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iVerifyTheQueryInPageTitle(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 210000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I see \u0027word\u0027 is present in the searchbox of new page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027word\u0027",
+                  "offset": 6
+                }
+              ],
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSeeQueryIsPresentInTheSearchboxOfNewPage(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I see webpage url is modified with \u0027word\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027word\u0027",
+                  "offset": 35
+                }
+              ],
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSeeQueryIsModified(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@YouTube"
+          },
+          {
+            "name": "@video-search"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-05T15:55:48.826Z",
+        "before": [
+          {
+            "result": {
+              "duration": 7666000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.openBrowser()"
+            }
+          }
+        ],
+        "line": 42,
+        "name": "Searching for a specific video",
+        "description": "",
+        "id": "youtube-video-select-and-search;searching-for-a-specific-video;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 783000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.closeDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 18312000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I have youtube web page open",
+            "match": {
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iHaveYoutubeWebPageOpen()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5519000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I search for this \u0027two words\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027two words\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSearchForThisQuery(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 458000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I verify the \u0027two words\u0027 in page title",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027two words\u0027",
+                  "offset": 13
+                }
+              ],
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iVerifyTheQueryInPageTitle(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 405000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I see \u0027two words\u0027 is present in the searchbox of new page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027two words\u0027",
+                  "offset": 6
+                }
+              ],
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSeeQueryIsPresentInTheSearchboxOfNewPage(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 115000000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I see webpage url is modified with \u0027two+words\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027two+words\u0027",
+                  "offset": 35
+                }
+              ],
+              "location": "dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSeeQueryIsModified(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@YouTube"
+          },
+          {
+            "name": "@video-search"
+          }
+        ]
+      }
+    ],
+    "name": "Youtube Video Select and Search",
+    "description": "",
+    "id": "youtube-video-select-and-search",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature",
+    "tags": [
+      {
+        "name": "@YouTube",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

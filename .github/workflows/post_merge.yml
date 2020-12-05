@@ -5,7 +5,7 @@ name: Selenium Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main , dev ]
 
 jobs:
   build:
@@ -23,12 +23,9 @@ jobs:
            mvn -B test --file selenium_test/pom.xml
            echo 'maven build started'
            echo "getting test results"
-           dir selenium_test/test-results
     - uses: actions/checkout@v2
     - run: |
         git status
-        git log --format='%ae' HEAD^!
-        git log --format='%an' HEAD^!
         git config --local user.email "$(git log --format='%ae' HEAD^!)"
         git config --local user.name "$(git log --format='%an' HEAD^!)"
         git add .

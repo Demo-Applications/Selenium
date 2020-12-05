@@ -1,0 +1,30 @@
+
+@YouTube @video-click @home-page
+Scenario: Clicking any video from the homepage [90m# src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:23[0m
+  [32mGiven [0m[32mI have youtube homepage open[0m           [90m# dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.iHaveYoutubeHomepageOpen()[0m
+  [32mWhen [0m[32mI choose a video[0m                        [90m# dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.iChooseAVideo()[0m
+  [32mAnd [0m[32mopen it in a new tab[0m                     [90m# dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.openItInANewTab()[0m
+  [32mAnd [0m[32mswitch to that tab[0m                       [90m# dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.switchToThatTab()[0m
+  [32mThen [0m[32mi can see video page opened[0m             [90m# dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.iCanSeeVideoPageOpened()[0m
+  [31mAnd [0m[31mvideo starts playing[0m                     [90m# dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.videoStartsPlaying()[0m
+      [31mjava.lang.IllegalStateException: video is not played
+	at org.apache.http.util.Asserts.check(Asserts.java:34)
+	at dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.videoStartsPlaying(YoutubeHomeTest.java:73)
+	at ✽.video starts playing(file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:29)
+[0m
+
+@YouTube @video-search
+Scenario Outline: Searching for a specific video           [90m# src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:41[0m
+  [32mGiven [0m[32mI have youtube web page open[0m                       [90m# dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iHaveYoutubeWebPageOpen()[0m
+  [32mWhen [0m[32mI search for this [0m[32m[1m'word'[0m                            [90m# dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSearchForThisQuery(java.lang.String)[0m
+  [32mThen [0m[32mI verify the [0m[32m[1m'word'[0m[32m in page title[0m                   [90m# dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iVerifyTheQueryInPageTitle(java.lang.String)[0m
+  [32mAnd [0m[32mI see [0m[32m[1m'word'[0m[32m is present in the searchbox of new page[0m [90m# dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSeeQueryIsPresentInTheSearchboxOfNewPage(java.lang.String)[0m
+  [32mAnd [0m[32mI see webpage url is modified with [0m[32m[1m'word'[0m            [90m# dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSeeQueryIsModified(java.lang.String)[0m
+
+@YouTube @video-search
+Scenario Outline: Searching for a specific video                [90m# src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:42[0m
+  [32mGiven [0m[32mI have youtube web page open[0m                            [90m# dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iHaveYoutubeWebPageOpen()[0m
+  [32mWhen [0m[32mI search for this [0m[32m[1m'two words'[0m                            [90m# dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSearchForThisQuery(java.lang.String)[0m
+  [32mThen [0m[32mI verify the [0m[32m[1m'two words'[0m[32m in page title[0m                   [90m# dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iVerifyTheQueryInPageTitle(java.lang.String)[0m
+  [32mAnd [0m[32mI see [0m[32m[1m'two words'[0m[32m is present in the searchbox of new page[0m [90m# dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSeeQueryIsPresentInTheSearchboxOfNewPage(java.lang.String)[0m
+  [32mAnd [0m[32mI see webpage url is modified with [0m[32m[1m'two+words'[0m            [90m# dey.sayantan.selenium.youtube.steps.YoutubeSearchTest.iSeeQueryIsModified(java.lang.String)[0m

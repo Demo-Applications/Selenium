@@ -43,7 +43,7 @@ public class YoutubeHomeTest {
 	public void iChooseAVideo() {
 		// Choosing part is mocked here by generating a random number that is the index
 		// of the video on homepage
-		videoToBeClicked = YoutubeTestUtil.selectVideoToBeClickedByIndex(ThreadLocalRandom.current().nextInt(1, 22),
+		videoToBeClicked = YoutubeTestUtil.selectVideoToBeClickedByIndex(ThreadLocalRandom.current().nextInt(1, 14),
 				driver);
 	}
 
