@@ -20,6 +20,7 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B test --file selenium_test/pom.xml
+           echo 'maven build `date`'
     - name: Commit files # commit the output folder
       run: |
           git config --local user.email "35377739+sayantandey@users.noreply.github.com"
