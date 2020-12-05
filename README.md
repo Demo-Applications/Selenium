@@ -13,7 +13,6 @@
 
 * Selenium test project for automating the user behavior and testing using behaviors mentioned in features
 * Check below to see list of features implemented till now.
-* The tags that are ignored do not have their respective output JSON file, but they might appear as child of other tags if it occurs (we can't ignore the child of tags that are NOT ignored).
 
 ### Requirements
 
@@ -37,24 +36,15 @@ Run the test using maven CLI
 
 #### 1. YouTube :  
 
-​       a. Randomly select a video on homepage and opening it new tab and verify it's played
-
-​       b. Searching for a video and verify
+     1. Randomly select a video on homepage and opening it new tab and verify it's played
+     2. Searching for a video and verify
 
 
 
 ## Project Structure
 
 ```
-Selenium
-│   README.md
-├───docs
-│   └───logos
-│           cucumber.png
-│           JUnit.png
-│           selenium.png
-│
-└───selenium_test
+selenium_test
     │   pom.xml
     │
     └───src
