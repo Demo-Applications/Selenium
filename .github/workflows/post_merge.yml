@@ -21,16 +21,10 @@ jobs:
     - name: Build with Maven
       run: |
            mvn -B test --file selenium_test/pom.xml
-           echo 'maven build `date`'
-#     - name: Commit files # commit the output folder
-#       run: |
-#           git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
-#           git pull github ${GITHUB_REF} --ff-only
-#           git add selenium_test/test-results
-#           git commit -m "tests"
-#           git push github HEAD:${GITHUB_REF}
-#       env:
-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           echo 'maven build started'
+           ls
+           echo "getting test results"
+           dir selenium_test/test-results
     - uses: actions/checkout@master
       with:
         persist-credentials: true # the token used is the GITHUB_TOKEN, instead of your personal token
