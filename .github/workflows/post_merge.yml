@@ -24,15 +24,13 @@ jobs:
            echo 'maven build started'
            echo "getting test results"
            dir selenium_test/test-results
-    - uses: actions/checkout@master
-      with:
-        persist-credentials: true # the token used is the GITHUB_TOKEN, instead of your personal token
-        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-    - name: Commit files
-      run: |
+    - uses: actions/checkout@v2
+    - run: |
+        git status
+        git log --format='%ae' HEAD^!
+        git log --format='%an' HEAD^!
         git config --local user.email "$(git log --format='%ae' HEAD^!)"
         git config --local user.name "$(git log --format='%an' HEAD^!)"
-        git status
         git add .
         git push
     - name: Dump job context
