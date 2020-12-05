@@ -7,12 +7,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/java", glue = "dey.sayantan.selenium.youtube.steps", plugin = {
-		"html:target/youtube-html-report", "json:target/youtube.json", "pretty:target/youtube-pretty.txt",
-		"usage:target/youtube-usage.json", "junit:target/youtube-results.xml" })
-<<<<<<< HEAD:selenium_test/src/test/java/dey/sayantan/selenium/youtube/runner/JUnitRunnerTest.java
+		"html:test-results/youtube-html-report", "json:test-results/youtube.json", "pretty:test-results/youtube-pretty.txt",
+		"usage:test-results/youtube-usage.json", "junit:test-results/youtube-results.xml" })
 public class JUnitRunnerTest {
-=======
-public class JUnitRunner {
->>>>>>> main:selenium_test/src/test/java/dey/sayantan/selenium/youtube/runner/JUnitRunner.java
 
 }

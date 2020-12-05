@@ -1,5 +1,5 @@
 # SELENIUM TEST [With Cucumber and J-Unit]
-![Selenium Tests](https://github.com/My-Applications/Selenium/workflows/Selenium%20Tests/badge.svg)
+[![Selenium Tests](https://github.com/My-Applications/Selenium/workflows/Selenium%20Tests/badge.svg)](selenium_test/test-results/youtube-html-report.html)
 # Table of Contents
 1. [Introduction](#Introduction)
 2. [Requirements](#Requirements)
