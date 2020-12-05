@@ -1,0 +1,238 @@
+[
+  {
+    "source": "I have youtube homepage open",
+    "steps": [
+      {
+        "name": "I have youtube homepage open",
+        "aggregatedDurations": {
+          "median": 20.558,
+          "average": 20.558
+        },
+        "durations": [
+          {
+            "duration": 20.558,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I choose a video",
+    "steps": [
+      {
+        "name": "I choose a video",
+        "aggregatedDurations": {
+          "median": 1.334,
+          "average": 1.334
+        },
+        "durations": [
+          {
+            "duration": 1.334,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:25"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "open it in a new tab",
+    "steps": [
+      {
+        "name": "open it in a new tab",
+        "aggregatedDurations": {
+          "median": 0.786,
+          "average": 0.786
+        },
+        "durations": [
+          {
+            "duration": 0.786,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "switch to that tab",
+    "steps": [
+      {
+        "name": "switch to that tab",
+        "aggregatedDurations": {
+          "median": 0.348,
+          "average": 0.348
+        },
+        "durations": [
+          {
+            "duration": 0.348,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:27"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "i can see video page opened",
+    "steps": [
+      {
+        "name": "i can see video page opened",
+        "aggregatedDurations": {
+          "median": 18.917,
+          "average": 18.917
+        },
+        "durations": [
+          {
+            "duration": 18.917,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:28"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I have youtube web page open",
+    "steps": [
+      {
+        "name": "I have youtube web page open",
+        "aggregatedDurations": {
+          "median": 23.321,
+          "average": 23.321
+        },
+        "durations": [
+          {
+            "duration": 28.33,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:33"
+          },
+          {
+            "duration": 18.312,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:33"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I search for this {string}",
+    "steps": [
+      {
+        "name": "I search for this \u0027word\u0027",
+        "aggregatedDurations": {
+          "median": 6.666,
+          "average": 6.666
+        },
+        "durations": [
+          {
+            "duration": 6.666,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:34"
+          }
+        ]
+      },
+      {
+        "name": "I search for this \u0027two words\u0027",
+        "aggregatedDurations": {
+          "median": 5.519,
+          "average": 5.519
+        },
+        "durations": [
+          {
+            "duration": 5.519,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:34"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I verify the {string} in page title",
+    "steps": [
+      {
+        "name": "I verify the \u0027word\u0027 in page title",
+        "aggregatedDurations": {
+          "median": 0.016,
+          "average": 0.016
+        },
+        "durations": [
+          {
+            "duration": 0.016,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:35"
+          }
+        ]
+      },
+      {
+        "name": "I verify the \u0027two words\u0027 in page title",
+        "aggregatedDurations": {
+          "median": 0.458,
+          "average": 0.458
+        },
+        "durations": [
+          {
+            "duration": 0.458,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:35"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I see {string} is present in the searchbox of new page",
+    "steps": [
+      {
+        "name": "I see \u0027word\u0027 is present in the searchbox of new page",
+        "aggregatedDurations": {
+          "median": 0.21,
+          "average": 0.21
+        },
+        "durations": [
+          {
+            "duration": 0.21,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:36"
+          }
+        ]
+      },
+      {
+        "name": "I see \u0027two words\u0027 is present in the searchbox of new page",
+        "aggregatedDurations": {
+          "median": 0.405,
+          "average": 0.405
+        },
+        "durations": [
+          {
+            "duration": 0.405,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:36"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I see webpage url is modified with {string}",
+    "steps": [
+      {
+        "name": "I see webpage url is modified with \u0027word\u0027",
+        "aggregatedDurations": {
+          "median": 0.014,
+          "average": 0.014
+        },
+        "durations": [
+          {
+            "duration": 0.014,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:37"
+          }
+        ]
+      },
+      {
+        "name": "I see webpage url is modified with \u0027two+words\u0027",
+        "aggregatedDurations": {
+          "median": 0.115,
+          "average": 0.115
+        },
+        "durations": [
+          {
+            "duration": 0.115,
+            "location": "file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:37"
+          }
+        ]
+      }
+    ]
+  }
+]

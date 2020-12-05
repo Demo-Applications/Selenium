@@ -1,7 +1,10 @@
 package dey.sayantan.selenium.youtube.utils;
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -75,6 +78,8 @@ public class YoutubeTestUtil {
 			driver.findElement(By.className(VIDEO_AD_CLASS));
 			driver.findElement(By.className("ytp-ad-skip-button")).click();
 		} catch (NoSuchElementException ex) {
+		} catch (ElementNotInteractableException e) {
+			driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		}
 		WebElement progressBarElement = driver.findElement(By.className(PROGRESS_BAR_CLASS));
 		return Integer.parseInt(progressBarElement.getAttribute(PROGRESS_ATTRIBUTE));
