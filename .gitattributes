@@ -1,2 +1,1 @@
-* linguist-vendored
-*.java linguist-vendored=false
+selenium_test/test-results/* linguist-vendored
