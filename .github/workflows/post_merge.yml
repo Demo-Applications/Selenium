@@ -22,15 +22,28 @@ jobs:
       run: |
            mvn -B test --file selenium_test/pom.xml
            echo 'maven build `date`'
-    - name: Commit files # commit the output folder
-      run: |
-          git config --local user.email "35377739+sayantandey@users.noreply.github.com"
-          git config --local user.name "Sayantan Dey's bot"
-          git add selenium_test/test-results
-          git commit -m "Test Results at `date`"
+#     - name: Commit files # commit the output folder
+#       run: |
+#           git config --local user.email "35377739+sayantandey@users.noreply.github.com"
+#           git config --local user.name "Sayantan Dey's bot"
+#           git add selenium_test/test-results
+#           git commit -m "Test Results at `date`"
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v5
+      with:
+        author_name: sayantandey
+        author_email: syaintandey@gmail.com
+        message: "Your commit message"
+        add: "selenium_test/test-results"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Push changes # push the output folder to your repo
       uses: ad-m/github-push-action@master
       with:
         # branch: ignore if main
         github_token: ${{ secrets.GITHUB_TOKEN }}
         force: true
+    - name: Dump job context
+      env:
+        JOB_CONTEXT: ${{ toJson(job) }}
+        run: echo "$JOB_CONTEXT"
