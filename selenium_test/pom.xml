@@ -5,12 +5,21 @@
 	<groupId>sayantan</groupId>
 	<artifactId>selenium_java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<name>Selenium Tests</name>
+	<description>Automate user interaction using selenium and testing them using BDD framwework CUCMBER with gherkins. J-units used as test runner </description>
+	<developers>
+		<developer>
+			<name> Sayantan Dey </name>
+			<email> iamsayantandey@gmail.com </email>
+		</developer>
+	</developers>
 	<dependencies>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-server</artifactId>
 			<version>3.141.59</version>
 		</dependency>
+		<!-- To setup browser while creating an instance -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
