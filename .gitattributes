@@ -1,1 +1,3 @@
-selenium_test/test-results/* linguist-vendored
+*.json linguist-vendored
+*.xml linguist-vendored
+*.txt linguist-vendored
