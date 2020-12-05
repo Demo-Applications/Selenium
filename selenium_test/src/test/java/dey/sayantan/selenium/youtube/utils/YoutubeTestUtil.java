@@ -1,5 +1,6 @@
 package dey.sayantan.selenium.youtube.utils;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -51,7 +52,7 @@ public class YoutubeTestUtil {
 	}
 
 	public static void searchForVideo(String videoSearchString, WebDriver driver) {
-		if (videoSearchString.isBlank())
+		if (StringUtils.isBlank(videoSearchString))
 			throw new RuntimeException("Search string is empty");
 		openYoutubeIfNotOpened(driver);
 		WebElement searchContainer = driver.findElement(By.tagName(SEARCH_BOX_TAG));
