@@ -20,7 +20,7 @@
 
 - Maven 3.x;
 
-- Dependencies : The dependencies are mentioned in   [**POM**](../blob/main/selenium_test/pom.xml) file
+- Dependencies : The dependencies are mentioned in   [**POM**](../main/selenium_test/pom.xml) file
 
   > <img src="docs/logos/selenium.png" width="78">         <img src="docs/logos/cucumber.png" width="78">        <img src="docs/logos/JUnit.png" width="88">     
 
