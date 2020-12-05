@@ -10,7 +10,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
 
     steps:
     - uses: actions/checkout@v2
@@ -19,4 +19,28 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B test --file selenium_test/pom.xml
+      run: |
+           mvn -B test --file selenium_test/pom.xml
+           echo 'maven build started'
+           ls
+           echo "getting test results"
+           dir selenium_test/test-results
+    - uses: actions/checkout@master
+      with:
+        persist-credentials: true # the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+    - name: Commit files
+      run: |
+        git config --local user.email "syaintandey@gmail.com" |cat
+        git config --local user.name "sayantandey"
+        git add .
+        git commit -m "Add changes" -a |cat
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+    - name: Dump job context
+      env:
+        JOB_CONTEXT: ${{ toJson(job) }}
+      run: echo "$JOB_CONTEXT"
