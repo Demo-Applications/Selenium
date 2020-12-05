@@ -22,20 +22,29 @@ jobs:
       run: |
            mvn -B test --file selenium_test/pom.xml
            echo 'maven build `date`'
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v5
+#     - name: Commit files # commit the output folder
+#       run: |
+#           git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+#           git pull github ${GITHUB_REF} --ff-only
+#           git add selenium_test/test-results
+#           git commit -m "tests"
+#           git push github HEAD:${GITHUB_REF}
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@master
       with:
-        author_name: sayantandey
-        author_email: syaintandey@gmail.com
-        message: "Your commit message"
-        add: "selenium_test/test-results"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Push changes # push the output folder to your repo
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Add changes" -a
+    - name: Push changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        force: true
+        branch: ${{ github.ref }}
     - name: Dump job context
       env:
         JOB_CONTEXT: ${{ toJson(job) }}
