@@ -18,11 +18,15 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Maven
+    - name: Execute Test Suite With Maven
       run: |
            mvn -B test --file selenium_test/pom.xml
-           echo 'maven build started'
-           echo "getting test results"
+           echo 'Test execution started'
+    - name: Save Static File
+      uses: actions/upload-artifact@v3
+      with:
+          name: Test-Results-Screenshots-${{ github.run_id }}
+          path: selenium_test/target/output           
     - uses: actions/checkout@v2
     - run: |
         git status
