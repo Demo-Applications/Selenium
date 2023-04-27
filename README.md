@@ -1,5 +1,7 @@
 # SELENIUM TEST [With Cucumber and J-Unit]
-[![Selenium Tests](https://github.com/My-Applications/Selenium/actions/workflows/maven-test.yaml/badge.svg)](selenium_test/test-results/youtube-html-report.html)
+[![Build Status](https://github.com/My-Applications/Selenium/actions/workflows/maven-test.yaml/badge.svg)](https://github.com/Demo-Applications/Selenium/actions/workflows/maven.yml)
+[![Selenium Tests](https://github.com/My-Applications/Selenium/workflows/Selenium%20Tests/badge.svg)](selenium_test/test-results/youtube-html-report.html)
+
 # Table of Contents
 1. [Introduction](#Introduction)
 2. [Requirements](#Requirements)
