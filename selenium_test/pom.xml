@@ -10,7 +10,6 @@
 	<developers>
 		<developer>
 			<name> Sayantan Dey </name>
-			<email> iamsayantandey@gmail.com </email>
 		</developer>
 	</developers>
 	<dependencies>
@@ -23,7 +22,7 @@
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>3.8.1</version>
+			<version>5.3.2</version>
 		</dependency>
 		<!-- For BDD using cucumber with gherkins -->
 		<dependency>

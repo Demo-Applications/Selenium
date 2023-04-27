@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="153.724">
-<testcase classname="Youtube Video Select and Search" name="Clicking any video from the homepage" time="69.084">
-<failure message="video is not played" type="java.lang.IllegalStateException"><![CDATA[Given I have youtube homepage open..........................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="56.474">
+<testcase classname="Youtube Video Select and Search" name="Clicking any video from the homepage" time="25.844">
+<system-out><![CDATA[Given I have youtube homepage open..........................................passed
 When I choose a video.......................................................passed
 And open it in a new tab....................................................passed
 And switch to that tab......................................................passed
 Then i can see video page opened............................................passed
-And video starts playing....................................................failed
-
-StackTrace:
-java.lang.IllegalStateException: video is not played
-	at org.apache.http.util.Asserts.check(Asserts.java:34)
-	at dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.videoStartsPlaying(YoutubeHomeTest.java:73)
-	at ✽.video starts playing(file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:29)
-]]></failure>
+And video starts playing....................................................passed
+]]></system-out>
 </testcase>
-<testcase classname="Youtube Video Select and Search" name="Searching for a specific video" time="49.424">
+<testcase classname="Youtube Video Select and Search" name="Searching for a specific video" time="19.422">
 <system-out><![CDATA[Given I have youtube web page open..........................................passed
 When I search for this 'word'...............................................passed
 Then I verify the 'word' in page title......................................passed
@@ -23,7 +17,7 @@ And I see 'word' is present in the searchbox of new page....................pass
 And I see webpage url is modified with 'word'...............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Youtube Video Select and Search" name="Searching for a specific video 2" time="33.27">
+<testcase classname="Youtube Video Select and Search" name="Searching for a specific video 2" time="10.804">
 <system-out><![CDATA[Given I have youtube web page open..........................................passed
 When I search for this 'two words'..........................................passed
 Then I verify the 'two words' in page title.................................passed

@@ -6,12 +6,7 @@ Scenario: Clicking any video from the homepage [90m# src/test/java/dey/sayantan
   [32mAnd [0m[32mopen it in a new tab[0m                     [90m# dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.openItInANewTab()[0m
   [32mAnd [0m[32mswitch to that tab[0m                       [90m# dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.switchToThatTab()[0m
   [32mThen [0m[32mi can see video page opened[0m             [90m# dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.iCanSeeVideoPageOpened()[0m
-  [31mAnd [0m[31mvideo starts playing[0m                     [90m# dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.videoStartsPlaying()[0m
-      [31mjava.lang.IllegalStateException: video is not played
-	at org.apache.http.util.Asserts.check(Asserts.java:34)
-	at dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.videoStartsPlaying(YoutubeHomeTest.java:73)
-	at ✽.video starts playing(file:///C:/Users/Sayantan/Documents/Git%20Repos/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:29)
-[0m
+  [32mAnd [0m[32mvideo starts playing[0m                     [90m# dey.sayantan.selenium.youtube.steps.YoutubeHomeTest.videoStartsPlaying()[0m
 
 @YouTube @video-search
 Scenario Outline: Searching for a specific video           [90m# src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:41[0m
