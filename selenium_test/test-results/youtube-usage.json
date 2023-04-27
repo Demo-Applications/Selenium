@@ -5,12 +5,12 @@
       {
         "name": "I have youtube homepage open",
         "aggregatedDurations": {
-          "median": 3.756,
-          "average": 3.756
+          "median": 3.669,
+          "average": 3.669
         },
         "durations": [
           {
-            "duration": 3.756,
+            "duration": 3.669,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:24"
           }
         ]
@@ -23,12 +23,12 @@
       {
         "name": "I choose a video",
         "aggregatedDurations": {
-          "median": 0.604,
-          "average": 0.604
+          "median": 0.2,
+          "average": 0.2
         },
         "durations": [
           {
-            "duration": 0.604,
+            "duration": 0.2,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:25"
           }
         ]
@@ -41,12 +41,12 @@
       {
         "name": "open it in a new tab",
         "aggregatedDurations": {
-          "median": 0.333,
-          "average": 0.333
+          "median": 0.552,
+          "average": 0.552
         },
         "durations": [
           {
-            "duration": 0.333,
+            "duration": 0.552,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:26"
           }
         ]
@@ -59,12 +59,12 @@
       {
         "name": "switch to that tab",
         "aggregatedDurations": {
-          "median": 0.603,
-          "average": 0.603
+          "median": 0.422,
+          "average": 0.422
         },
         "durations": [
           {
-            "duration": 0.603,
+            "duration": 0.422,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:27"
           }
         ]
@@ -77,12 +77,12 @@
       {
         "name": "i can see video page opened",
         "aggregatedDurations": {
-          "median": 2.012,
-          "average": 2.012
+          "median": 3.146,
+          "average": 3.146
         },
         "durations": [
           {
-            "duration": 2.012,
+            "duration": 3.146,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:28"
           }
         ]
@@ -95,12 +95,12 @@
       {
         "name": "video starts playing",
         "aggregatedDurations": {
-          "median": 1.009,
-          "average": 1.009
+          "median": 22.861,
+          "average": 22.861
         },
         "durations": [
           {
-            "duration": 1.009,
+            "duration": 22.861,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:29"
           }
         ]
@@ -113,16 +113,16 @@
       {
         "name": "I have youtube web page open",
         "aggregatedDurations": {
-          "median": 3.348,
-          "average": 3.348
+          "median": 3.523,
+          "average": 3.523
         },
         "durations": [
           {
-            "duration": 3.297,
+            "duration": 3.812,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:33"
           },
           {
-            "duration": 3.399,
+            "duration": 3.234,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:33"
           }
         ]
@@ -135,12 +135,12 @@
       {
         "name": "I search for this \u0027word\u0027",
         "aggregatedDurations": {
-          "median": 2.839,
-          "average": 2.839
+          "median": 2.575,
+          "average": 2.575
         },
         "durations": [
           {
-            "duration": 2.839,
+            "duration": 2.575,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:34"
           }
         ]
@@ -148,12 +148,12 @@
       {
         "name": "I search for this \u0027two words\u0027",
         "aggregatedDurations": {
-          "median": 3.31,
-          "average": 3.31
+          "median": 2.344,
+          "average": 2.344
         },
         "durations": [
           {
-            "duration": 3.31,
+            "duration": 2.344,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:34"
           }
         ]
@@ -166,12 +166,12 @@
       {
         "name": "I verify the \u0027word\u0027 in page title",
         "aggregatedDurations": {
-          "median": 9.268,
-          "average": 9.268
+          "median": 0.28,
+          "average": 0.28
         },
         "durations": [
           {
-            "duration": 9.268,
+            "duration": 0.28,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:35"
           }
         ]
@@ -179,12 +179,12 @@
       {
         "name": "I verify the \u0027two words\u0027 in page title",
         "aggregatedDurations": {
-          "median": 0.016,
-          "average": 0.016
+          "median": 0.267,
+          "average": 0.267
         },
         "durations": [
           {
-            "duration": 0.016,
+            "duration": 0.267,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:35"
           }
         ]
@@ -197,12 +197,12 @@
       {
         "name": "I see \u0027word\u0027 is present in the searchbox of new page",
         "aggregatedDurations": {
-          "median": 0.066,
-          "average": 0.066
+          "median": 0.468,
+          "average": 0.468
         },
         "durations": [
           {
-            "duration": 0.066,
+            "duration": 0.468,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:36"
           }
         ]
@@ -210,12 +210,12 @@
       {
         "name": "I see \u0027two words\u0027 is present in the searchbox of new page",
         "aggregatedDurations": {
-          "median": 0.234,
-          "average": 0.234
+          "median": 0.27,
+          "average": 0.27
         },
         "durations": [
           {
-            "duration": 0.234,
+            "duration": 0.27,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:36"
           }
         ]
@@ -228,12 +228,12 @@
       {
         "name": "I see webpage url is modified with \u0027word\u0027",
         "aggregatedDurations": {
-          "median": 0.008,
-          "average": 0.008
+          "median": 0.153,
+          "average": 0.153
         },
         "durations": [
           {
-            "duration": 0.008,
+            "duration": 0.153,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:37"
           }
         ]
@@ -241,12 +241,12 @@
       {
         "name": "I see webpage url is modified with \u0027two+words\u0027",
         "aggregatedDurations": {
-          "median": 0.06,
-          "average": 0.06
+          "median": 0.104,
+          "average": 0.104
         },
         "durations": [
           {
-            "duration": 0.06,
+            "duration": 0.104,
             "location": "file:///C:/Users/iamsa/Documents/Git%20Repos/Others/Practice/Selenium/selenium_test/src/test/java/dey/sayantan/selenium/youtube/features/Youtube.feature:37"
           }
         ]

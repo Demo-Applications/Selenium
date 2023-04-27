@@ -1,5 +1,6 @@
 package dey.sayantan.selenium.youtube.utils;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -7,13 +8,16 @@ import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.w3c.dom.html.HTMLFormElement;
 
 public class YoutubeTestUtil {
 
@@ -68,8 +72,11 @@ public class YoutubeTestUtil {
 		searchContainer.click();
 		searchContainer.sendKeys(videoSearchString);
 		WebElement formElement = searchContainer.findElement(By.tagName(FORM));
+		String currentTitle = driver.getTitle();
 		formElement.submit();
-		new WebDriverWait(driver, 10).until(ExpectedConditions.stalenessOf(formElement));
+		new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofMillis(100))
+				.ignoring(NoSuchElementException.class, TimeoutException.class)
+				.until(ExpectedConditions.not(ExpectedConditions.titleIs(currentTitle)));
 
 	}
 
@@ -88,7 +95,7 @@ public class YoutubeTestUtil {
 				// Wait till skip button
 				new WebDriverWait(driver, 40).until(ExpectedConditions.elementToBeClickable(skipAdEl));
 				skipAdEl.click();
-			} catch (TimeoutException e) {
+			} catch (Exception e) {
 				// No skip Ad button
 				driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 			}
@@ -98,9 +105,21 @@ public class YoutubeTestUtil {
 			WebElement progressBarElement = youtubeShorts.get(0).findElement(By.className(SHORTS_PROGRESS_BAR_CLASS));
 			return Integer.parseInt(progressBarElement.getAttribute(PROGRESS_ATTRIBUTE));
 		} else {
-			WebElement progressBarElement = driver.findElement(By.className(PROGRESS_BAR_CLASS));
+			By progressBarLocator = By.className(PROGRESS_BAR_CLASS);
+			Wait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(1))
+					.pollingEvery(Duration.ofMillis(100))
+					.ignoring(NoSuchElementException.class, TimeoutException.class);
+			wait.until(videoPlayed(progressBarLocator, PROGRESS_ATTRIBUTE));
+			WebElement progressBarElement = driver.findElement(progressBarLocator);
 			return Integer.parseInt(progressBarElement.getAttribute(PROGRESS_ATTRIBUTE));
 		}
+	}
+
+	private static ExpectedCondition<Boolean> videoPlayed(By locator, String attribute) {
+		return driver -> {
+			String value = driver.findElement(locator).getAttribute(attribute);
+			return value != null && !value.isEmpty() && Integer.parseInt(value) > 0;
+		};
 	}
 
 	public static String getPageTitle(WebDriver driver) {

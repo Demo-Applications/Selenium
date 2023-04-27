@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="56.474">
-<testcase classname="Youtube Video Select and Search" name="Clicking any video from the homepage" time="25.844">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="67.707">
+<testcase classname="Youtube Video Select and Search" name="Clicking any video from the homepage" time="45.257">
 <system-out><![CDATA[Given I have youtube homepage open..........................................passed
 When I choose a video.......................................................passed
 And open it in a new tab....................................................passed
@@ -9,7 +9,7 @@ Then i can see video page opened............................................pass
 And video starts playing....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Youtube Video Select and Search" name="Searching for a specific video" time="19.422">
+<testcase classname="Youtube Video Select and Search" name="Searching for a specific video" time="11.059">
 <system-out><![CDATA[Given I have youtube web page open..........................................passed
 When I search for this 'word'...............................................passed
 Then I verify the 'word' in page title......................................passed
@@ -17,7 +17,7 @@ And I see 'word' is present in the searchbox of new page....................pass
 And I see webpage url is modified with 'word'...............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Youtube Video Select and Search" name="Searching for a specific video 2" time="10.804">
+<testcase classname="Youtube Video Select and Search" name="Searching for a specific video 2" time="11.172">
 <system-out><![CDATA[Given I have youtube web page open..........................................passed
 When I search for this 'two words'..........................................passed
 Then I verify the 'two words' in page title.................................passed
