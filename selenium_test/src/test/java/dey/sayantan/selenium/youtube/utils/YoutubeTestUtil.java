@@ -1,5 +1,6 @@
 package dey.sayantan.selenium.youtube.utils;
 
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.WebDriverWait; 
 
 public class YoutubeTestUtil {
 
@@ -120,6 +121,7 @@ public class YoutubeTestUtil {
 			String value = driver.findElement(locator).getAttribute(attribute);
 			return value != null && !value.isEmpty() && Integer.parseInt(value) > 0;
 		};
+
 	}
 
 	public static String getPageTitle(WebDriver driver) {
