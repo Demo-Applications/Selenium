@@ -1,6 +1,6 @@
 # SELENIUM TEST [With Cucumber and J-Unit]
 [![Build Status](https://github.com/Demo-Applications/Selenium/actions/workflows/maven.yml/badge.svg)](https://github.com/Demo-Applications/Selenium/actions/workflows/maven.yml)
-[![Selenium Tests](https://github.com/Demo-Applications/Selenium/workflows/Selenium%20Tests/badge.svg)](selenium_test/test-results/youtube-html-report.html)
+[![Selenium Tests](https://github.com/Demo-Applications/Selenium/actions/workflows/post_merge.yml/badge.svg)](https://github.com/Demo-Applications/Selenium/actions/workflows/post_merge.yml)
 
 # Table of Contents
 1. [Introduction](#Introduction)
